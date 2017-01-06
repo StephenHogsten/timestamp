@@ -1,0 +1,17 @@
+{
+  "name": "@hogdog/timestamp",
+  "version": "1.0.0",
+  "description": "timestamp microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [
+    "timestamp"
+  ],
+  "author": "hogdog",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
