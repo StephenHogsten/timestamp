@@ -1,12 +1,22 @@
 var express = require('express');
 var path = require('path');
+var dateformat = require('dateformat');
 
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res) {
-   console.log(__dirname);
+app.get('/:date', function(req, res) {
+   var retJSON = {
+      unix: null,
+      natural: null
+   };
+   var d = new Date(req.params.date);
+   if (d.getDay()) {
+      retJSON.unix = d.valueOf();
+      retJSON.natural = dateformat(d, 'mmmm d yyyy');
+   }
+   res.json(retJSON);
    res.end();
 });
 

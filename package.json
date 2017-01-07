@@ -12,6 +12,7 @@
   "author": "hogdog",
   "license": "ISC",
   "dependencies": {
+    "dateformat": "^2.0.0",
     "express": "^4.14.0"
   }
 }
