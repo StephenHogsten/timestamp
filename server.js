@@ -1,11 +1,15 @@
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function(req, res) {
-   res.send('hello world'); 
+   console.log(__dirname);
+   res.end();
 });
 
-app.listen(8080, function() {
-    console.log('added new listenr');
+app.listen(8080, function(a) {
+    console.log('added new listener: ' + a);
 });
